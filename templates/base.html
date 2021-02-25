@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>{% block title %} Electronics Commerce {% endblock %}</title>
+    <style type="text/css">
+      .min-h-100 { min-height: 100%; }
+   </style>
+</head>
+<body>
+   <div class="row">
+   <div id="header" class="bg-info col-sm-12 col-md-12 col-lg-12">
+      <div class="row">
+         <div class="col-sm-4 col-md-4 col-lg-4">
+            <img src="https://i.pinimg.com/originals/75/fa/9b/75fa9b17f632646e5ae7fae3cf837761.jpg" alt="E-commerce Logo" style="height:150px; width:auto;" />
+         </div>
+         <div class="col-sm-7 col-md-7 col-lg-7">
+            <h3>{% block header %} E-commerce{% endblock %}</h3>
+         </div>
+      </div>
+   </div>
+   </div>
+   <div class="row">
+   <div id="sidebar" class="min-h-100 min-h-800 bg-light border col-sm-3 col-md-3 col-lg-3">
+      {% block sidebar %}
+     <ul>
+        <li><a href="/admin/"><i class="fa fa-user" aria-hidden="true"></i> Admin</a></li>
+        <li><a href="/"><i class="fa fa-search" aria-hidden="true"></i>Product</a></li>
+        <li><a href="/cart/"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>    
+      </ul>
+      {% endblock %}
+   </div>
+   <div id="content" class="min-h-100 bg-light col-sm-9 col-md-9 col-lg-9">
+      {% block content %}{% endblock %}
+   </div>
+   </div>
+</body>
+</html>
